@@ -5,6 +5,7 @@ const session = require("express-session");
 //controller inputs need to be imported
 const authCtrl = require("./controllers/authController");
 const postCtrl = require("./controllers/postController");
+// still need middleware
 
 const { SERVER_PORT, CONNECTION_STRING, SESSION_SECRET } = process.env;
 
@@ -31,6 +32,8 @@ massive({
   app.set("db", db);
   console.log("<--DB CONNECTED-->");
 });
+
+//middleware for check user
 
 // auth endpoints
 // app.post(`auth/login`, authCtrl.login)
