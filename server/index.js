@@ -4,8 +4,9 @@ const massive = require("massive");
 const session = require("express-session");
 //controller inputs need to be imported
 const authCtrl = require("./controllers/authController");
-const postCtrl = require("./controllers/postController");
+// const postCtrl = require("./controllers/postController");
 // still need middleware
+// const checkUser = require('./middleware/checkUser')
 
 const { SERVER_PORT, CONNECTION_STRING, SESSION_SECRET } = process.env;
 
@@ -36,16 +37,16 @@ massive({
 //middleware for check user
 
 // auth endpoints
-// app.post(`auth/login`, authCtrl.login)
-// app.post(`auth/register`, authCtrl.register)
-// app.post(`auth/logout`, authCtrl.logout)
-// app.post(`auth/user`, authCtrl.checkUser)
+app.post(`/auth/login`, authCtrl.login);
+app.post(`/auth/register`, authCtrl.register);
+app.post(`/auth/logout`, authCtrl.logout);
+// app.post(`/auth/user`, authCtrl.checkUser)  //middleware
 
 // endpoints
-// app.post(`api/posts`, postCtrl.createPost)
-// app.get(`api/posts`, postCtrl.getPosts)
-// app.put(`api/posts/:id`, postCtrl.editPost)
-// app.delete(`api/posts/:id`, postCtrl.deletePost)
+// app.post(`/api/posts`, postCtrl.createPost)
+// app.get(`/api/posts`, postCtrl.getPosts)
+// app.put(`/api/posts/:id`, postCtrl.editPost)
+// app.delete(`/api/posts/:id`, postCtrl.deletePost)
 
 app.listen(SERVER_PORT, () =>
   console.log(`<--- SERVER JOGGING ON PORT ${SERVER_PORT} --->`)
