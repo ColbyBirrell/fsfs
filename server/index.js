@@ -6,7 +6,7 @@ const session = require("express-session");
 const authCtrl = require("./controllers/authController");
 // const postCtrl = require("./controllers/postController");
 // still need middleware
-// const checkUser = require('./middleware/checkUser')
+const checkUser = require("./middleware/checkUser");
 
 const { SERVER_PORT, CONNECTION_STRING, SESSION_SECRET } = process.env;
 
@@ -40,7 +40,7 @@ massive({
 app.post(`/auth/login`, authCtrl.login);
 app.post(`/auth/register`, authCtrl.register);
 app.post(`/auth/logout`, authCtrl.logout);
-// app.post(`/auth/user`, authCtrl.checkUser)  //middleware
+app.post(`/auth/user`, checkUser); //middleware
 
 // endpoints
 // app.post(`/api/posts`, postCtrl.createPost)
