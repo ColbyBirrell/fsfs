@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { register, login, logout } from "../../redux/reducers/userReducer";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
 
 function Header(props) {
   const [email_address, setEmail] = useState("");
@@ -19,6 +20,7 @@ function Header(props) {
               props.login(email_address, password);
               setEmail("");
               setPassword("");
+              props.history.push("/dashboard");
             }}
           >
             Members:
@@ -39,9 +41,9 @@ function Header(props) {
               Not a member?{" "}
               <span
                 onClick={() => setRegistered(false)}
-                style={{ color: "blue" }}
+                style={{ color: "green" }}
               >
-                Click here to sign up.
+                Click here to join.
               </span>
             </p>
           </form>
@@ -81,14 +83,14 @@ function Header(props) {
         )
       ) : (
         <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-evenly",
-            width: "40%"
-          }}
+        //   style={{
+        //     display: "flex",
+        //     alignItems: "center",
+        //     justifyContent: "space-evenly",
+        //     width: "40%"
+        //   }}
         >
-          <h3>Logged in as: {props.userReducer.user.email_address}</h3>
+          <h3>Welcome: {props.userReducer.user.email_address}</h3>
           <button>
             <Link to="/posts">Posts</Link>
           </button>
@@ -112,4 +114,6 @@ const mapStateToProps = reduxState => {
   };
 };
 
-export default connect(mapStateToProps, { logout, login, register })(Header);
+export default connect(mapStateToProps, { logout, login, register })(
+  withRouter(Header)
+);
