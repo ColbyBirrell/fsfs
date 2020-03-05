@@ -21,7 +21,7 @@ function Header(props) {
               setPassword("");
             }}
           >
-            Existing Users:
+            Members:
             <input
               type="email"
               value={email_address}
@@ -36,12 +36,12 @@ function Header(props) {
             />
             <button>Login</button>
             <p>
-              Don't have an account?{" "}
+              Not a member?{" "}
               <span
                 onClick={() => setRegistered(false)}
                 style={{ color: "blue" }}
               >
-                Click here to register.
+                Click here to sign up.
               </span>
             </p>
           </form>
@@ -54,7 +54,7 @@ function Header(props) {
               setPassword("");
             }}
           >
-            New Account:
+            New Member:
             <input
               type="email"
               value={email_address}
@@ -69,12 +69,12 @@ function Header(props) {
             />
             <button>Register</button>
             <p>
-              Already have an account?{" "}
+              Already a member?{" "}
               <span
                 onClick={() => setRegistered(true)}
-                style={{ color: "blue" }}
+                style={{ color: "green" }}
               >
-                Click here to sign in.
+                Click here to log in.
               </span>
             </p>
           </form>
