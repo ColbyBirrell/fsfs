@@ -37,10 +37,10 @@ massive({
 //middleware for check user
 
 // auth endpoints
-app.post(`/auth/login`, authCtrl.login);
-app.post(`/auth/register`, authCtrl.register);
-app.post(`/auth/logout`, authCtrl.logout);
-app.post(`/auth/user`, checkUser); //middleware
+app.post(`/auth/login`, checkUser, authCtrl.login);
+app.post(`/auth/register`, checkUser, authCtrl.register);
+app.post(`/auth/logout`, checkUser, authCtrl.logout);
+app.get(`/auth/user`, checkUser); //middleware
 
 // endpoints
 // app.post(`/api/posts`, postCtrl.createPost)

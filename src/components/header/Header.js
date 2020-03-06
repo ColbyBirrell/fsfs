@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { register, login, logout } from "../../redux/reducers/userReducer";
-// import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "./header.css";
 
 function Header(props) {

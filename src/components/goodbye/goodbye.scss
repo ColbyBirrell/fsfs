@@ -1,0 +1,24 @@
+@import "../../sass/_vars";
+
+.bye-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //   justify-content: center;
+}
+
+.bye-welc {
+  color: $text-color;
+  font-family: $font-family;
+}
+
+.bye-title {
+  color: $text-color;
+  font-family: $font-family;
+}
+
+.bye-dir {
+  color: $text-color;
+  //   font-family: $font-family;
+  font-size: x-small;
+}

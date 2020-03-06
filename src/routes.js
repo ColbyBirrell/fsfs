@@ -4,7 +4,7 @@ import Welcome from "./components/welcome/Welcome";
 import Dashboard from "./components/dashboard/Dashboard";
 import Posts from "./components/posts/Posts";
 import Post from "./components/post/Post";
-import Goodbye from "./components/goodbye/goodbye";
+import Goodbye from "./components/goodbye/Goodbye";
 import Form from "./components/form/Form";
 
 export default (

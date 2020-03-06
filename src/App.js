@@ -27,9 +27,7 @@ class App extends React.Component {
   }
 
   render() {
-    // let loading = this.props.userReducer.loading ? "busy-cursor" : null;
     return (
-      //${loading}
       <div className={"App"}>
         <Header />
         {routes}

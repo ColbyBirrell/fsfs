@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,QAAQ,CAAC;EACP,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,MAAM;CAEpB;;AAED,AAAA,SAAS,CAAC;EACR,KAAK,ECJM,YAAY;EDKvB,WAAW,ECJC,kBAAkB,EAAE,OAAO;CDKxC;;AAED,AAAA,UAAU,CAAC;EACT,KAAK,ECTM,YAAY;EDUvB,WAAW,ECTC,kBAAkB,EAAE,OAAO;CDUxC;;AAED,AAAA,QAAQ,CAAC;EACP,KAAK,ECdM,YAAY;EDgBvB,SAAS,EAAE,OAAO;CACnB",
+    "sources": [
+        "goodbye.scss",
+        "../../sass/__vars.scss"
+    ],
+    "names": [],
+    "file": "goodbye.css"
+}
