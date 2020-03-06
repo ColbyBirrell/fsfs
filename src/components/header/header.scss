@@ -1,1 +1,41 @@
-// @import "../../sass/_vars";
+@import "../../sass/_vars";
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.head-form {
+  width: 160px;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.head-user {
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.head-switch {
+  display: flex;
+  justify-content: flex-end;
+  font-size: small;
+}
+
+input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+button {
+  background: transparent;
+  font-weight: bold;
+  border: none;
+}

@@ -1,1 +1,12 @@
 @import "./sass/_vars";
+
+.App {
+  height: 100vh;
+  width: 100vw;
+  //   text-align: center;
+  background-image: url("./IMG_20170703_202146709_HDR.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  //   background-position-y: px;
+}

@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAEA,AAAA,YAAY,CAAC;EACX,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,MAAM;CAEpB;;AAED,AAAA,UAAU,CAAC;EACT,KAAK,ECJM,YAAY;EDKvB,WAAW,ECJC,kBAAkB,EAAE,OAAO;CDKxC;;AAED,AAAA,WAAW,CAAC;EACV,KAAK,ECTM,YAAY;EDUvB,WAAW,ECTC,kBAAkB,EAAE,OAAO;CDUxC;;AAED,AAAA,SAAS,CAAC;EACR,KAAK,ECdM,YAAY;EDgBvB,SAAS,EAAE,OAAO;CACnB",
     "sources": [
-        "welcome.scss"
+        "welcome.scss",
+        "../../sass/__vars.scss"
     ],
     "names": [],
     "file": "welcome.css"
