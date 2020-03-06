@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  height: 100vh;
+  width: 100vw;
+  //   text-align: center;
+  background-image: url("./IMG_20170703_202146709_HDR.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  //   background-position-y: px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.head-form {
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+}
+
+.head-user {
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.head-switch {
+  display: flex;
+  justify-content: flex-end;
+  font-size: small;
+}
+
+input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+button {
+  background: transparent;
+  font-weight: bold;
+  border: none;
+}

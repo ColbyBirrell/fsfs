@@ -3,6 +3,7 @@ import { register, login, logout } from "../../redux/reducers/userReducer";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
+import "./header.scss";
 
 function Header(props) {
   const [email_address, setEmail] = useState("");
@@ -15,6 +16,7 @@ function Header(props) {
       {!props.userReducer.user.email_address ? (
         registered ? (
           <form
+            className="head-form"
             onSubmit={e => {
               e.preventDefault();
               props.login(email_address, password);
@@ -38,10 +40,11 @@ function Header(props) {
             />
             <button>Login</button>
             <p>
-              Not a member?{" "}
+              {/* Not a member?{" "} */}
               <span
+                className="head-switch"
                 onClick={() => setRegistered(false)}
-                style={{ color: "green" }}
+                // style={{ color: "green" }}
               >
                 Click here to join.
               </span>
@@ -49,14 +52,16 @@ function Header(props) {
           </form>
         ) : (
           <form
+            className="head-form"
             onSubmit={e => {
               e.preventDefault();
               props.register(email_address, password);
               setEmail("");
               setPassword("");
+              props.history.push("/dashboard");
             }}
           >
-            New Member:
+            New Members:
             <input
               type="email"
               value={email_address}
@@ -71,10 +76,11 @@ function Header(props) {
             />
             <button>Register</button>
             <p>
-              Already a member?{" "}
+              {/* Already a member?{" "} */}
               <span
+                className="head-switch"
                 onClick={() => setRegistered(true)}
-                style={{ color: "green" }}
+                // style={{ color: "green" }}
               >
                 Click here to log in.
               </span>
@@ -82,18 +88,8 @@ function Header(props) {
           </form>
         )
       ) : (
-        <div
-        //   style={{
-        //     display: "flex",
-        //     alignItems: "center",
-        //     justifyContent: "space-evenly",
-        //     width: "40%"
-        //   }}
-        >
-          <h3>Welcome: {props.userReducer.user.email_address}</h3>
-          <button>
-            <Link to="/posts">Posts</Link>
-          </button>
+        <div className="head-user">
+          <h4>{props.userReducer.user.email_address}</h4>
           <button
             onClick={() => {
               props.logout();
@@ -101,6 +97,9 @@ function Header(props) {
           >
             Logout
           </button>
+          {/* <button>
+            <Link to="/posts">Posts</Link>
+          </button> */}
         </div>
       )}
       {/* <AuthErrors /> */}
