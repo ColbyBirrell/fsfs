@@ -9,6 +9,8 @@ import { withRouter } from "react-router-dom";
 class App extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {};
   }
 
   componentDidMount() {
@@ -16,7 +18,7 @@ class App extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.userReducer.user != this.props.userReducer.user) {
+    if (prevProps.userReducer.user !== this.props.userReducer.user) {
       if (!this.props.userReducer.user.email_address)
         this.props.history.push("/goodbye");
     }

@@ -44,8 +44,10 @@ module.exports = {
   },
 
   logout: (req, res) => {
+    // console.log("hit logout");
     if (req.session) {
       req.session.destroy();
+      // console.log(req.session);
       res.sendStatus(200);
     }
   }
