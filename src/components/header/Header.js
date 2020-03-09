@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { register, login, logout } from "../../redux/reducers/userReducer";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./header.css";
 
 function Header(props) {
@@ -12,7 +12,11 @@ function Header(props) {
 
   return (
     <div className="header">
-      <h1>FSFS</h1>
+      <div className="head-title">
+        <Link to="/dashboard" className="title-link">
+          <h1>FSFS</h1>
+        </Link>
+      </div>
       {!props.userReducer.user.email_address ? (
         registered ? (
           <form
@@ -38,7 +42,7 @@ function Header(props) {
               placeholder="enter your password"
               onChange={e => setPassword(e.target.value)}
             />
-            <button>Login</button>
+            <button className="head-butt">Login</button>
             <p>
               {/* Not a member?{" "} */}
               <span
@@ -74,7 +78,7 @@ function Header(props) {
               placeholder="enter your password"
               onChange={e => setPassword(e.target.value)}
             />
-            <button>Register</button>
+            <button className="head-butt">Register</button>
             <p>
               {/* Already a member?{" "} */}
               <span
@@ -91,6 +95,7 @@ function Header(props) {
         <div className="head-user">
           <h4>{props.userReducer.user.email_address}</h4>
           <button
+            className="head-butt"
             onClick={() => {
               props.logout();
             }}

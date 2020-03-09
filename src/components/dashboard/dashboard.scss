@@ -1,0 +1,36 @@
+@import "../../sass/_vars";
+
+.dash-box {
+  height: 100%;
+  background-image: url("../../photo-1492496913980-501348b61469.jpeg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //   justify-content: center;
+}
+
+.dash-greet {
+  color: $text-color;
+  font-family: $font-family;
+  font-size: 1.75rem;
+}
+
+.dash-buttons-box {
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.dash-butt {
+  background: transparent;
+  font-size: 1.5rem;
+  //   font-weight: bold;
+  border: none;
+
+  color: $text-color;
+  font-family: $font-family;
+  text-decoration: underline;
+}

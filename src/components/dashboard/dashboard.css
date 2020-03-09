@@ -1,1 +1,47 @@
-/* No CSS *//*# sourceMappingURL=dashboard.css.map */
+.dash-box {
+  height: 100%;
+  background-image: url("../../photo-1492496913980-501348b61469.jpeg");
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dash-greet {
+  color: antiquewhite;
+  font-family: "Permanent Marker", cursive;
+  font-size: 1.75rem;
+}
+
+.dash-buttons-box {
+  height: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.dash-butt {
+  background: transparent;
+  font-size: 1.5rem;
+  border: none;
+  color: antiquewhite;
+  font-family: "Permanent Marker", cursive;
+  text-decoration: underline;
+}
+/*# sourceMappingURL=dashboard.css.map */
