@@ -1,0 +1,33 @@
+@import "../../sass/_vars";
+
+.form-body {
+  height: 708px;
+  background-image: url("../../farmroad.jpg");
+  background-size: cover;
+  //   background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-main {
+  height: 50%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+}
+
+.form-butts {
+  background: transparent;
+  // font-size: 1.5rem;
+  //   font-weight: bold;
+  border: none;
+
+  color: $text-color;
+  font-family: $font-family;
+  text-decoration: underline;
+}

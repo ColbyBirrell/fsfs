@@ -1,7 +1,8 @@
 .dash-box {
-  height: 100%;
-  background-image: url("../../photo-1492496913980-501348b61469.jpeg");
+  height: 708px;
+  background-image: url("../../grain.jpg");
   background-size: cover;
+  background-position: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
