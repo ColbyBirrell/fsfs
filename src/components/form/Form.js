@@ -9,29 +9,32 @@ function Form() {
     <div className="form-body">
       <div className="form-main">
         Create a New Post
-        <img className="img-form" alt="" />
         <div className="form-inputs">
           <input
+            className="form-input"
             name="postTitle"
-            placeholder="Enter Post Title"
+            placeholder="Enter Listing Title"
             // onChange={this.handleInput}
           />
           <textarea
+            className="form-text-area"
             name="postText"
-            placeholder="Enter Post Text"
+            placeholder="Enter Description"
             // onChange={this.handleInput}
           />
           <input
+            className="form-input"
             name="img"
             placeholder="Enter img URL"
             // onChange={this.handleInput}
           />
+          <img className="img-form" alt="" />
         </div>
         <div className="form-butts">
           <Link to="/dashboard">
-            <button>List It</button>
+            <button className="form-butt">List It</button>
           </Link>
-          <button>Cancel</button>
+          <button className="form-butt">Cancel</button>
         </div>
       </div>
     </div>
