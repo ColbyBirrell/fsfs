@@ -1,5 +1,5 @@
 INSERT INTO products(
-user_id INT REFERENCES users(user_id),
+user_id,
 prod_name,
 price,
 prod_description,
@@ -13,5 +13,5 @@ VALUES(
     ${prod_img}
 );
 
-returning * from products
+-- returning * from products;
 

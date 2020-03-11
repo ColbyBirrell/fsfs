@@ -4,7 +4,7 @@ const massive = require("massive");
 const session = require("express-session");
 //controller inputs need to be imported
 const authCtrl = require("./controllers/authController");
-// const postCtrl = require("./controllers/postController");
+const postCtrl = require("./controllers/postController");
 const checkUser = require("./middleware/checkUser");
 
 const {
@@ -86,10 +86,10 @@ app.post(`/auth/logout`, authCtrl.logout);
 app.get(`/auth/user`, checkUser); //middleware
 
 // endpoints
-// app.post(`/api/posts`, postCtrl.createPost)
-// app.get(`/api/posts`, postCtrl.getPosts)
+app.post(`/api/posts`, postCtrl.createProducts);
+app.get(`/api/posts`, postCtrl.getProducts);
 // app.put(`/api/posts/:id`, postCtrl.editPost)
-// app.delete(`/api/posts/:id`, postCtrl.deletePost)
+app.delete(`/api/posts/:id`, postCtrl.deleteProducts);
 
 app.listen(SERVER_PORT, () =>
   console.log(`<--- SERVER JOGGING ON PORT ${SERVER_PORT} --->`)
