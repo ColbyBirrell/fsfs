@@ -12,7 +12,7 @@ class Form extends Component {
 
     this.state = {
       // isUploading: false,
-      url: "https://dummyimage.com/250x150/aaaaaa/faebd7&text=Upload+a+Pic"
+      prod_img: "https://dummyimage.com/250x150/aaaaaa/faebd7&text=Upload+a+Pic"
     };
   }
 
@@ -48,7 +48,7 @@ class Form extends Component {
     axios
       .put(signedRequest, file, options)
       .then(response => {
-        this.setState({ url });
+        this.setState({ prod_img: url });
         // THEN DO SOMETHING WITH THE URL. SEND TO DB USING POST REQUEST OR SOMETHING
       })
       .catch(err => {
@@ -92,7 +92,7 @@ class Form extends Component {
               // multiple={false}
               onChange={e => this.getSignedRequest(e.target.files)}
             />
-            <img className="img-form" src={this.state.url} alt="" />
+            <img className="img-form" src={this.state.prod_img} alt="" />
           </div>
           <div className="form-butts">
             <Link to="/dashboard">
