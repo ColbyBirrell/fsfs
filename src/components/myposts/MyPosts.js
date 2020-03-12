@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import MyPost from "../mypost/MyPost";
 import axios from "axios";
+import "./myposts.scss";
 
 class MyPosts extends Component {
   constructor(props) {
@@ -27,14 +28,14 @@ class MyPosts extends Component {
       .catch(err => console.log(err));
   };
 
-  deletePost = id => {
-    axios
-      .delete(`/api/posts/${id}`)
-      .then(() => {
-        this.getPosts();
-      })
-      .catch(err => console.log(err));
-  };
+  //   deletePost = id => {
+  //     axios
+  //       .delete(`/api/posts/${id}`)
+  //       .then(() => {
+  //         this.getPosts();
+  //       })
+  //       .catch(err => console.log(err));
+  //   };
 
   render() {
     console.log(this.state);
@@ -43,14 +44,16 @@ class MyPosts extends Component {
         <MyPost
           key={element.prod_id}
           post={element}
-          deletePost={this.deletePost}
+          getUserPosts={this.getUserPosts}
         />
       );
     });
     return (
       <div>
-        <div> My Posts Component</div>
-        <div className="posts-main">{showAllMyPosts}</div>
+        <div className="posts-main">
+          <div> My Posts</div>
+          {showAllMyPosts}
+        </div>
       </div>
     );
   }

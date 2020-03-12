@@ -141,7 +141,7 @@ class Form extends Component {
                 List It
               </button>
             </Link>
-            <Link to="/dashboard">
+            <Link to="/posts">
               <button className="form-butt">Cancel</button>
             </Link>
           </div>

@@ -43,7 +43,7 @@ class Posts extends Component {
         <Post
           key={element.prod_id}
           post={element}
-          deletePost={this.deletePost}
+          // getUserPosts={this.getUserPosts}
         />
       );
     });
