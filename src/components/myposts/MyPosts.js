@@ -1,27 +1,27 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import Post from "../post/Post";
+import MyPost from "../mypost/MyPost";
 import axios from "axios";
 
-class Posts extends Component {
+class MyPosts extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      postList: []
+      myPostList: []
     };
   }
 
   componentDidMount() {
-    this.getPosts();
+    this.getUserPosts();
   }
 
-  getPosts = (req, res) => {
+  getUserPosts = (req, res) => {
     axios
-      .get(`/api/posts`)
+      .get(`/api/posts/${this.props.userReducer.user.user_id}`)
       .then(res => {
         this.setState({
-          postList: res.data
+          myPostList: res.data
         });
       })
       .catch(err => console.log(err));
@@ -38,9 +38,9 @@ class Posts extends Component {
 
   render() {
     console.log(this.state);
-    const showAllPosts = this.state.postList.map(element => {
+    const showAllMyPosts = this.state.myPostList.map(element => {
       return (
-        <Post
+        <MyPost
           key={element.prod_id}
           post={element}
           deletePost={this.deletePost}
@@ -49,8 +49,8 @@ class Posts extends Component {
     });
     return (
       <div>
-        <div>Posts Component</div>
-        <div className="posts-main">{showAllPosts}</div>
+        <div> My Posts Component</div>
+        <div className="posts-main">{showAllMyPosts}</div>
       </div>
     );
   }
@@ -62,4 +62,4 @@ const mapStateToProps = reduxState => {
   };
 };
 
-export default connect(mapStateToProps, {})(Posts);
+export default connect(mapStateToProps, {})(MyPosts);

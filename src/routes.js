@@ -6,7 +6,7 @@ import Posts from "./components/posts/Posts";
 import Post from "./components/post/Post";
 import Goodbye from "./components/goodbye/Goodbye";
 import Form from "./components/form/Form";
-// import MyPosts from './components/myposts/MyPosts'
+import MyPosts from "./components/myposts/MyPosts";
 
 export default (
   <Switch>
@@ -15,7 +15,7 @@ export default (
     <Route path="/form" component={Form} />
     <Route path="/posts" component={Posts} />
     <Route path="/post" component={Post} />
-    {/* <Route path='/myposts' component={MyPosts} */}
+    <Route path="/myposts" component={MyPosts} />
     <Route path="/goodbye" component={Goodbye} />
   </Switch>
 );
