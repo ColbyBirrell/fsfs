@@ -89,7 +89,7 @@ app.get(`/auth/user`, checkUser); //middleware
 app.post(`/api/posts`, postCtrl.createProducts);
 app.get(`/api/posts`, postCtrl.getProducts);
 app.get(`/api/posts/:id`, postCtrl.getUserProducts);
-// app.put(`/api/posts/:id`, postCtrl.editPost)
+// app.put(`/api/posts/:id`, postCtrl.editProducts)
 app.delete(`/api/posts/:id`, postCtrl.deleteProducts);
 
 app.listen(SERVER_PORT, () =>

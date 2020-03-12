@@ -36,6 +36,14 @@ module.exports = {
     res.status(200).send("product created successfully");
   },
 
+  // editPost: (req, res) => {
+  //   const db = req.app.get('db')
+  //   const { id } = req.params
+  //   const { prod_name, price, prod_description } = req.body
+  //   db.edit_post([prod_name, price, prod_description, id])
+  //     .then(() => res.sendStatus(200))
+  //     .catch(err => res.status(500).send(err))
+
   deleteProducts: async (req, res) => {
     const { id } = req.params;
     const db = req.app.get("db");
