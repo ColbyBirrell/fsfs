@@ -1,2 +1,2 @@
-get * from products
-where user_id = ${user_id}
+SELECT * from products
+where user_id = $1

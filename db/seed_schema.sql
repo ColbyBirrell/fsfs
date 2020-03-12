@@ -15,3 +15,15 @@ prod_img VARCHAR(2500)
 );
 
 
+{
+	"user_id": 3,
+	"prod_name": "Horses",
+	"price": 9999.99,
+	"prod_description": "They are horses, they are good, they are for sale",
+	"prod_img": "this is a test img"
+}
+
+SELECT * FROM products
+
+-- DELETE FROM products
+-- WHERE prod_id IN (21)

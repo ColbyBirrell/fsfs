@@ -27,6 +27,15 @@ class Posts extends Component {
   //     .catch(err => console.log(err));
   // };
 
+  // deletePost = id => {
+  //   axios
+  //     .delete(`/api/posts/${id}`)
+  //     .then(() => {
+  //       this.getPosts();
+  //     })
+  //     .catch(err => console.log(err));
+  // };
+
   render() {
     return <div>Posts Component</div>;
   }

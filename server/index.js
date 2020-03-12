@@ -88,6 +88,7 @@ app.get(`/auth/user`, checkUser); //middleware
 // endpoints
 app.post(`/api/posts`, postCtrl.createProducts);
 app.get(`/api/posts`, postCtrl.getProducts);
+app.get(`/api/posts/:id`, postCtrl.getUserProducts);
 // app.put(`/api/posts/:id`, postCtrl.editPost)
 app.delete(`/api/posts/:id`, postCtrl.deleteProducts);
 

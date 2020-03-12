@@ -10,6 +10,18 @@ module.exports = {
     }
   },
 
+  getUserProducts: async (req, res) => {
+    const { id } = req.params;
+    const db = req.app.get("db");
+
+    let allProducts = await db.get_user_products([id]);
+    if (allProducts !== []) {
+      res.status(200).send(allProducts);
+    } else {
+      res.status(404).send("Products not found");
+    }
+  },
+
   createProducts: async (req, res) => {
     const { prod_name, prod_img, prod_description, price, user_id } = req.body;
     const db = req.app.get("db");
