@@ -10,8 +10,15 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   margin-top: 5px;
 }
+
+// .post-left {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: flex-start;
+// }
 
 .img-thumb {
   height: 50px;

@@ -23,7 +23,7 @@ prod_img VARCHAR(2500)
 	"prod_img": "this is a test img"
 }
 
-SELECT * FROM products
+-- SELECT * FROM products
 
 -- DELETE FROM products
 -- WHERE prod_id IN (21)
