@@ -36,13 +36,17 @@ module.exports = {
     res.status(200).send("product created successfully");
   },
 
-  // editPost: (req, res) => {
-  //   const db = req.app.get('db')
-  //   const { id } = req.params
-  //   const { prod_name, price, prod_description } = req.body
-  //   db.edit_post([prod_name, price, prod_description, id])
-  //     .then(() => res.sendStatus(200))
-  //     .catch(err => res.status(500).send(err))
+  editProducts: (req, res) => {
+    console.log("hit edit");
+    const db = req.app.get("db");
+    // const { id } = req.params;
+    const id = +req.params.id;
+    const { prod_name, price, prod_description } = req.body;
+    // console.log(typeof id, prod_name, price, prod_description);
+    db.update_products({ prod_name, price, prod_description, id })
+      .then(() => res.sendStatus(200))
+      .catch(err => res.status(500).send(err));
+  },
 
   deleteProducts: async (req, res) => {
     const { id } = req.params;

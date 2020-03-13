@@ -7,9 +7,9 @@ class MyPost extends Component {
     super(props);
 
     this.state = {
-      prod_name: "",
-      price: null,
-      prod_description: "",
+      prod_name: props.post.prod_name,
+      price: props.post.price,
+      prod_description: props.post.prod_description,
       prod_id: this.props.post.prod_id,
       isEditing: false
     };
@@ -27,12 +27,22 @@ class MyPost extends Component {
     });
   };
 
+  editPost = () => {
+    const { prod_id } = this.props.post;
+    const { prod_name, price, prod_description } = this.state;
+    axios
+      .put(`/api/posts/${prod_id}`, { prod_name, price, prod_description })
+      .then(() => {
+        // this.setState({isEditing: false})
+        this.props.getUserPosts();
+      })
+      .catch(err => console.log(err));
+  };
+
   deletePost = id => {
     axios
       .delete(`/api/posts/${this.props.post.prod_id}`)
-      .then(() => {
-        // this.getPosts();
-      })
+      .then(() => {})
       .catch(err => console.log(err));
   };
 
@@ -49,28 +59,25 @@ class MyPost extends Component {
                 className="edit-name"
                 name="prod_name"
                 onChange={this.handleInput}
-                defaultValue={`${this.props.post.prod_name}`}
+                value={`${this.props.post.prod_name}`}
               />
               <input
                 className="edit-price"
                 name="price"
                 onChange={this.handleInput}
-                defaultValue={`${this.props.post.price}`}
+                value={`${this.props.post.price}`}
               />
               <textarea
                 className="edit-description"
                 name="prod_description"
                 onChange={this.handleInput}
-                defaultValue={`${this.props.post.prod_description}`}
+                value={`${this.props.post.prod_description}`}
               />
 
               <button
                 className="save-button"
                 onClick={() => {
-                  //     this.props.editProducts(
-                  //       this.props.post.prod_id,
-                  //       this.state.userInput
-                  //     );
+                  this.editPost();
                   this.editToggle();
                 }}
               >
@@ -82,9 +89,7 @@ class MyPost extends Component {
               <div className="post-title" onClick={this.editToggle}>
                 {this.props.post.prod_name}
               </div>
-
               <div className="post-price">{`$${this.props.post.price}`}</div>
-
               <div className="post-content">
                 {this.props.post.prod_description}
               </div>
