@@ -49,8 +49,10 @@ class Posts extends Component {
     });
     return (
       <div>
-        <div>Posts Component</div>
-        <div className="posts-main">{showAllPosts}</div>
+        <div className="posts-main">
+          <div>Posts Component</div>
+          {showAllPosts}
+        </div>
       </div>
     );
   }
