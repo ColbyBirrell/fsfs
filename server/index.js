@@ -6,6 +6,8 @@ const session = require("express-session");
 const authCtrl = require("./controllers/authController");
 const postCtrl = require("./controllers/postController");
 const checkUser = require("./middleware/checkUser");
+const mailCtrl = require(`./controllers/nodeMailController`);
+//add it
 
 const {
   SERVER_PORT,
@@ -91,6 +93,9 @@ app.get(`/api/posts`, postCtrl.getProducts);
 app.get(`/api/posts/:id`, postCtrl.getUserProducts);
 app.put(`/api/posts/:id`, postCtrl.editProducts);
 app.delete(`/api/posts/:id`, postCtrl.deleteProducts);
+
+//nodemailer end
+app.post(`/api/mailer`, mailCtrl.sendEmail);
 
 app.listen(SERVER_PORT, () =>
   console.log(`<--- SERVER JOGGING ON PORT ${SERVER_PORT} --->`)
