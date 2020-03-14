@@ -1,23 +1,42 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { postToReduce } from "../../redux/reducers/postReducer";
+import { connect } from "react-redux";
+import { Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
-export default function Post(props) {
+function Post(props) {
+  // useEffect(() => {
+
+  // }, [])
+
+  const pushDataToRedux = () => {
+    props.postToReduce(
+      props.post.prod_img,
+      props.post.prod_name,
+      props.post.price,
+      props.post.prod_description
+    );
+  };
+
   return (
-    <div className="post-main">
+    <Link
+      to="/indipost"
+      onClick={() => pushDataToRedux()}
+      className="post-main"
+    >
       <img className="img-thumb" src={props.post.prod_img} alt="thumb" />
       <div className="post-title">{props.post.prod_name}</div>
       <div className="post-price">{`$${props.post.price}`}</div>
       <div className="post-content">{props.post.prod_description}</div>
-      {/* <div className="delete-post">
-        <button
-          className="del-butt"
-          onClick={() => {
-            this.deletePost();
-            this.props.getUserPosts();
-          }}
-        >
-          X
-        </button> */}
       {/* </div> */}
-    </div>
+    </Link>
   );
 }
+
+const mapStateToProps = reduxState => {
+  return {
+    postReducer: reduxState.postReducer
+  };
+};
+
+export default connect(mapStateToProps, { postToReduce })(withRouter(Post));
