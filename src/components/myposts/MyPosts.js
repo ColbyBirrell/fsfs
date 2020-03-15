@@ -28,15 +28,6 @@ class MyPosts extends Component {
       .catch(err => console.log(err));
   };
 
-  //   deletePost = id => {
-  //     axios
-  //       .delete(`/api/posts/${id}`)
-  //       .then(() => {
-  //         this.getPosts();
-  //       })
-  //       .catch(err => console.log(err));
-  //   };
-
   render() {
     console.log(this.state);
     const showAllMyPosts = this.state.myPostList.map(element => {
