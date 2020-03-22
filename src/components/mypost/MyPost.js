@@ -64,19 +64,19 @@ class MyPost extends Component {
                   className="edit-name"
                   name="prod_name"
                   onChange={this.handleInput}
-                  value={`${this.props.post.prod_name}`}
+                  defaultValue={`${this.props.post.prod_name}`}
                 />
                 <input
                   className="edit-price"
                   name="price"
                   onChange={this.handleInput}
-                  value={`${this.props.post.price}`}
+                  defaultValue={`${this.props.post.price}`}
                 />
                 <textarea
                   className="edit-description"
                   name="prod_description"
                   onChange={this.handleInput}
-                  value={`${this.props.post.prod_description}`}
+                  defaultValue={`${this.props.post.prod_description}`}
                 />
 
                 <button

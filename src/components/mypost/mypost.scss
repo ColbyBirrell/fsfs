@@ -10,9 +10,17 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  // justify-content: space-between;
+  justify-content: flex-start;
   margin-top: 5px;
   text-decoration: none;
+}
+
+.my-post-right {
+  width: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  // align-items: center;
 }
 
 // .post-left {
@@ -27,13 +35,6 @@
   //   margin-left: 15px;
   margin: 10px;
   border-radius: 5px;
-}
-
-.my-post-right {
-  display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
 }
 
 .my-post-title {

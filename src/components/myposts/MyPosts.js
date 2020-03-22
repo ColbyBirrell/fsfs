@@ -42,7 +42,7 @@ class MyPosts extends Component {
     return (
       <div>
         <div className="posts-main">
-          <div> My Posts</div>
+          <div className="my-posts-head"> My Posts</div>
           {showAllMyPosts}
         </div>
       </div>

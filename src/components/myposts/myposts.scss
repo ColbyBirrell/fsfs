@@ -1,6 +1,14 @@
+@import "../../sass/_vars";
+
 .posts-main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.my-posts-head {
+  color: $text-color;
+  font-family: $font-family;
+  font-size: 2rem;
 }
