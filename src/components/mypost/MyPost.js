@@ -49,64 +49,70 @@ class MyPost extends Component {
   render() {
     console.log(this.state);
     return (
-      <div className="post-main">
-        <img className="img-thumb" src={this.props.post.prod_img} alt="thumb" />
+      <div className="my-post-main">
+        <img
+          className="my-img-thumb"
+          src={this.props.post.prod_img}
+          alt="thumb"
+        />
         {/* <div className="post-title">{this.props.post.prod_name}</div> */}
-        <div className="post-left">
-          {this.state.isEditing ? (
-            <div>
-              <input
-                className="edit-name"
-                name="prod_name"
-                onChange={this.handleInput}
-                value={`${this.props.post.prod_name}`}
-              />
-              <input
-                className="edit-price"
-                name="price"
-                onChange={this.handleInput}
-                value={`${this.props.post.price}`}
-              />
-              <textarea
-                className="edit-description"
-                name="prod_description"
-                onChange={this.handleInput}
-                value={`${this.props.post.prod_description}`}
-              />
+        <div classname="my-post-right">
+          <div className="my-post-text">
+            {this.state.isEditing ? (
+              <div>
+                <input
+                  className="edit-name"
+                  name="prod_name"
+                  onChange={this.handleInput}
+                  value={`${this.props.post.prod_name}`}
+                />
+                <input
+                  className="edit-price"
+                  name="price"
+                  onChange={this.handleInput}
+                  value={`${this.props.post.price}`}
+                />
+                <textarea
+                  className="edit-description"
+                  name="prod_description"
+                  onChange={this.handleInput}
+                  value={`${this.props.post.prod_description}`}
+                />
 
-              <button
-                className="save-button"
-                onClick={() => {
-                  this.editPost();
-                  this.editToggle();
-                }}
-              >
-                SAVE IT!
-              </button>
-            </div>
-          ) : (
-            <div className="post-info">
-              <div className="post-title" onClick={this.editToggle}>
-                {this.props.post.prod_name}
+                <button
+                  className="save-button"
+                  onClick={() => {
+                    this.editPost();
+                    this.editToggle();
+                  }}
+                >
+                  SAVE IT!
+                </button>
               </div>
-              <div className="post-price">{`$${this.props.post.price}`}</div>
-              <div className="post-content">
-                {this.props.post.prod_description}
+            ) : (
+              <div className="my-post-info">
+                <div className="my-post-title" onClick={this.editToggle}>
+                  {this.props.post.prod_name}
+                </div>
+                <div className="my-post-price">{`$${this.props.post.price}`}</div>
+                <div className="my-post-content">
+                  {this.props.post.prod_description}
+                </div>
               </div>
-            </div>
-          )}
-        </div>
+            )}
+          </div>
 
-        <div className="delete-post">
-          <button
-            className="del-butt"
-            onClick={() => {
-              this.deletePost();
-              this.props.getUserPosts();
-            }}
-          >
-            X
-          </button>
+          <div className="delete-post">
+            <button
+              className="del-butt"
+              onClick={() => {
+                this.deletePost();
+                this.props.getUserPosts();
+              }}
+            >
+              X
+            </button>
+          </div>
         </div>
       </div>
     );

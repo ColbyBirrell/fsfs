@@ -1,6 +1,6 @@
 @import "../../sass/_vars";
 
-.post-main {
+.my-post-main {
   width: 95%;
   padding-right: 5px;
   background-color: rgba(0, 0, 0, 0.75);
@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  //   justify-content: space-between;
+  // justify-content: space-between;
   margin-top: 5px;
   text-decoration: none;
 }
@@ -21,7 +21,7 @@
 //   justify-content: flex-start;
 // }
 
-.img-thumb {
+.my-img-thumb {
   height: 50px;
   width: 90px;
   //   margin-left: 15px;
@@ -29,18 +29,27 @@
   border-radius: 5px;
 }
 
-.post-title {
+.my-post-right {
+  display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+}
+
+.my-post-title {
   margin: 5px;
 }
 
-.post-price {
+.my-post-price {
   margin: 5px;
 }
 
-.post-content {
+.my-post-content {
   margin: 5px;
 }
 
 // .delete-post {
 //   margin: 5px;
+//   display: flex;
+//   // justify-content: flex-end;
 // }
