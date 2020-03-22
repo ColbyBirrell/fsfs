@@ -1,1 +1,57 @@
 @import "../../sass/_vars";
+
+.indi-post-body {
+  height: 708px;
+  background-image: url("../../farmroad.jpg");
+  background-size: cover;
+  //   background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.indi-post-main {
+  color: $text-color;
+  //   font-family: $font-family;
+  //   font-size: 1.25rem;
+  height: 90%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 15px;
+}
+
+.indi-post-text {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  //   justify-content: space-evenly;
+  align-items: center;
+  color: $text-color;
+  border-bottom-color: antiquewhite;
+}
+
+.indi-img {
+  margin-top: 25px;
+  border-radius: 10px;
+}
+
+.indi-post-title {
+  font-size: 1.75rem;
+  margin-bottom: 10px;
+}
+
+.indi-post-price {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.indi-post-content {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

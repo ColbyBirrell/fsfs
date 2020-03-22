@@ -50,7 +50,7 @@ class Posts extends Component {
     return (
       <div>
         <div className="posts-main">
-          <div>Posts Component</div>
+          {/* <div>Posts Component</div> */}
           {showAllPosts}
         </div>
       </div>

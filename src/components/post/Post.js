@@ -3,6 +3,7 @@ import { postToReduce } from "../../redux/reducers/postReducer";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router-dom";
+import "./post.scss";
 
 function Post(props) {
   // useEffect(() => {
@@ -27,7 +28,7 @@ function Post(props) {
       <img className="img-thumb" src={props.post.prod_img} alt="thumb" />
       <div className="post-title">{props.post.prod_name}</div>
       <div className="post-price">{`$${props.post.price}`}</div>
-      <div className="post-content">{props.post.prod_description}</div>
+      {/* <div className="post-content">{props.post.prod_description}</div> */}
       {/* </div> */}
     </Link>
   );
