@@ -86,7 +86,7 @@ class MyPost extends Component {
                     this.editToggle();
                   }}
                 >
-                  SAVE IT!
+                  SAVE
                 </button>
               </div>
             ) : (

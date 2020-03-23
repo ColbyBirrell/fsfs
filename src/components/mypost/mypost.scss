@@ -49,8 +49,38 @@
   margin: 5px;
 }
 
+.edit-description {
+  height: 50px;
+  width: 225px;
+  background-color: transparent;
+  color: $text-color;
+  border-color: #faebd7;
+}
+
 // .delete-post {
 //   margin: 5px;
 //   display: flex;
 //   // justify-content: flex-end;
 // }
+
+.del-butt {
+  background: transparent;
+  font-size: 1.25rem;
+  //   font-weight: bold;
+  border: none;
+
+  color: $text-color;
+  font-family: $font-family;
+  // text-decoration: underline;
+}
+
+.save-button {
+  background: transparent;
+  font-size: 1.1rem;
+  //   font-weight: bold;
+  border: none;
+
+  color: $text-color;
+  // font-family: $font-family;
+  text-decoration: underline;
+}

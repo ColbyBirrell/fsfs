@@ -14,7 +14,7 @@ function Header(props) {
     <div className="header">
       <div className="head-title">
         <Link to="/dashboard" className="title-link">
-          <h1>FSFS</h1>
+          <h1>FGFS</h1>
         </Link>
       </div>
       {!props.userReducer.user.email_address ? (

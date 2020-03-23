@@ -18,7 +18,7 @@ export function postToReduce(prod_img, prod_name, price, prod_description) {
 export default function postReducer(state = initialState, action) {
   switch (action.type) {
     case POST_TO_REDUCE:
-      console.log(action);
+      // console.log(action);
       return { ...state, ...action.payload };
     default:
       return state;

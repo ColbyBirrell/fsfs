@@ -4,7 +4,7 @@ const nodemailer = require("nodemailer");
 const { PASSWORD } = process.env;
 
 const sendEmail = (req, res) => {
-  console.log(req.body);
+  // console.log(req.body);
   const { email } = req.body;
 
   // Step 1

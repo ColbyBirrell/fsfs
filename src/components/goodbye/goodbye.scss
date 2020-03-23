@@ -22,3 +22,20 @@
   //   font-family: $font-family;
   font-size: x-small;
 }
+
+.email-signup {
+  margin-top: 200px;
+  height: 2rem;
+  border-bottom-color: antiquewhite;
+}
+
+.sign-button {
+  background: transparent;
+  font-size: 1.25rem;
+  //   font-weight: bold;
+  border: none;
+
+  color: $text-color;
+  font-family: $font-family;
+  // text-decoration: underline;
+}
