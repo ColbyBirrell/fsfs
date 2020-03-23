@@ -47,7 +47,7 @@ class MyPost extends Component {
   };
 
   render() {
-    console.log(this.state);
+    // console.log(this.state);
     return (
       <div className="my-post-main">
         <img
@@ -56,7 +56,7 @@ class MyPost extends Component {
           alt="thumb"
         />
         {/* <div className="post-title">{this.props.post.prod_name}</div> */}
-        <div classname="my-post-right">
+        <div className="my-post-right">
           <div className="my-post-text">
             {this.state.isEditing ? (
               <div>

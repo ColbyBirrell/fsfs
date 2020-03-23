@@ -96,7 +96,7 @@ class Form extends Component {
   };
 
   render() {
-    console.log(this.state);
+    // console.log(this.state);
     return (
       <div className="form-body">
         <div className="form-main">

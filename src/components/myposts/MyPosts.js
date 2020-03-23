@@ -29,7 +29,7 @@ class MyPosts extends Component {
   };
 
   render() {
-    console.log(this.state);
+    // console.log(this.state);
     const showAllMyPosts = this.state.myPostList.map(element => {
       return (
         <MyPost

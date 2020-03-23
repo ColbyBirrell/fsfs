@@ -37,7 +37,7 @@ class Posts extends Component {
   };
 
   render() {
-    console.log(this.state);
+    // console.log(this.state);
     const showAllPosts = this.state.postList.map(element => {
       return (
         <Post
