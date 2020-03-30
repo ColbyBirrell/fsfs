@@ -16,7 +16,7 @@ const sendEmail = (req, res) => {
     }
   });
 
-  let emailText = `Hello ${email}, Thank you for signing up, we will send COVID-19  ...updates as needed`;
+  let emailText = `Hello ${email}, Thank you for signing up, be sending updates as needed`;
   // Step 2
   let mailOptions = {
     from: "farmgoodsfs@gmail.com",
