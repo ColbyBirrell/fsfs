@@ -16,7 +16,8 @@ class Form extends Component {
       prod_name: "",
       price: null,
       prod_description: "",
-      prod_img: "https://dummyimage.com/250x150/aaaaaa/faebd7&text=Upload+a+Pic"
+      prod_img:
+        "https://dummyimage.com/250x150/aaaaaa/faebd7&text=Upload+a+Pic",
     };
   }
 
@@ -31,14 +32,14 @@ class Form extends Component {
       .get("/api/signs3", {
         params: {
           "file-name": fileName,
-          "file-type": file.type
-        }
+          "file-type": file.type,
+        },
       })
-      .then(response => {
+      .then((response) => {
         const { signedRequest, url } = response.data;
         this.uploadFile(file, signedRequest, url);
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err);
       });
   };
@@ -46,17 +47,17 @@ class Form extends Component {
   uploadFile = (file, signedRequest, url) => {
     const options = {
       headers: {
-        "Content-Type": file.type
-      }
+        "Content-Type": file.type,
+      },
     };
 
     axios
       .put(signedRequest, file, options)
-      .then(response => {
+      .then((response) => {
         this.setState({ prod_img: url });
         // THEN DO SOMETHING WITH THE URL. SEND TO DB USING POST REQUEST OR SOMETHING
       })
-      .catch(err => {
+      .catch((err) => {
         this.setState({
           // isUploading: false
         });
@@ -71,9 +72,9 @@ class Form extends Component {
   };
   //s3 end
 
-  handleInput = event => {
+  handleInput = (event) => {
     this.setState({
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     });
   };
 
@@ -84,7 +85,7 @@ class Form extends Component {
         price: this.state.price,
         prod_description: this.state.prod_description,
         prod_img: this.state.prod_img,
-        user_id: this.state.user_id
+        user_id: this.state.user_id,
       })
       // .then(res => {
       //   res.sendStatus(200);
@@ -92,7 +93,7 @@ class Form extends Component {
       // .then(res => {
       //   res.status(200).send(() => this.getPosts());
       // })
-      .catch(err => console.log(err));
+      .catch((err) => console.log(err));
   };
 
   render() {
@@ -131,7 +132,7 @@ class Form extends Component {
               // placeholder="Enter img URL"
               // accept="image/*"
               // multiple={false}
-              onChange={e => this.getSignedRequest(e.target.files)}
+              onChange={(e) => this.getSignedRequest(e.target.files)}
             />
             <img className="img-form" src={this.state.prod_img} alt="" />
           </div>
@@ -151,9 +152,9 @@ class Form extends Component {
   }
 }
 
-const mapStateToProps = reduxState => {
+const mapStateToProps = (reduxState) => {
   return {
-    userReducer: reduxState.userReducer
+    userReducer: reduxState.userReducer,
   };
 };
 
